@@ -1,0 +1,187 @@
+{
+    ///////////////////// VIM /////////////////////
+    //
+    //
+    "vim.useSystemClipboard": true,
+    "vim.leader": ",",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "t",
+                "t"
+            ],
+            "commands": [
+                "extension.createTable"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        },
+    ],
+    //
+    //
+    ////////////// APPEARANCE //////////////////
+    //
+    //
+    "workbench.colorCustomizations": {
+        "[Default Dark+]": {
+            "titleBar.activeBackground": "#000000",
+            "sideBar.background": "#0c0c0ccb",
+            "editor.background": "#0c0c0ccb",
+            "statusBar.background": "#0c0c0ccb",
+            "statusBar.noFolderBackground": "#0c0c0ccb",
+            "tab.activeBackground": "#0c0c0ccb",
+            "tab.inactiveBackground": "#0000002a"
+        },
+        "[Tokyo Night Ported Nvim]": {
+            "titleBar.activeBackground": "#000000",
+            "sideBar.background": "#0c0c0ccb",
+            "editor.background": "#0c0c0ccb",
+            "statusBar.background": "#0c0c0ccb",
+            "statusBar.noFolderBackground": "#0c0c0ccb",
+            "tab.activeBackground": "#0c0c0ccb",
+            "tab.inactiveBackground": "#0000002a"
+        },
+        "[Default High Contrast]": {
+            "focusBorder": "#6fc3df",
+            "tab.selectedBorderTop": "#6fc3df",
+            "titleBar.border": "#6fc3df",
+            "scrollbarSlider.background": "#6fc3df4e",
+            "editorIndentGuide.activeBackground1": "#ffffff87",
+            "editorIndentGuide.background1": "#ffffff3e",
+            "tab.activeBackground": "#000000"
+        },
+        "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, monospace",
+        "terminal.integrated.fontSize": 13,
+        "terminal.integrated.lineHeight": 1.1,
+        "terminal.integrated.letterSpacing": 0.5,
+        "terminal.integrated.cursorStyle": "block",
+        "terminal.integrated.cursorBlinking": false,
+        "terminal.integrated.minimumContrastRatio": 1,
+        "terminal.integrated.scrollback": 5000,
+        "terminal.integrated.drawBoldTextInBrightColors": false,
+        "terminal.integrated.enablePersistentSessions": false,
+        "workbench.colorCustomizations": {
+            "terminal.background": "#1c1c1c",
+            "terminal.foreground": "#d0d0d0",
+            "terminalCursor.foreground": "#d0d0d0",
+            "terminal.ansiBlack": "#1c1c1c",
+            "terminal.ansiRed": "#af5f5f",
+            "terminal.ansiGreen": "#5f875f",
+            "terminal.ansiYellow": "#87875f",
+            "terminal.ansiBlue": "#5f87af",
+            "terminal.ansiMagenta": "#5f5f87",
+            "terminal.ansiCyan": "#5f8787",
+            "terminal.ansiWhite": "#d0d0d0",
+            "terminal.ansiBrightBlack": "#585858",
+            "terminal.ansiBrightRed": "#d75f5f",
+            "terminal.ansiBrightGreen": "#87af87",
+            "terminal.ansiBrightYellow": "#ffd787",
+            "terminal.ansiBrightBlue": "#87afd7",
+            "terminal.ansiBrightMagenta": "#8787af",
+            "terminal.ansiBrightCyan": "#5fd7d7",
+            "terminal.ansiBrightWhite": "#eeeeee"
+        },
+        "terminal.background": "#00000000"
+    },
+    "workbench.activityBar.location": "top",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "expand",
+    "workbench.layoutControl.enabled": false,
+    "workbench.panel.showLabels": false,
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "none",
+    "window.commandCenter": false,
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "relative",
+    "chat.commandCenter.enabled": false,
+    "todo-tree.highlights.useColourScheme": true,
+    "pdf-preview.default.sidebar": false,
+    //
+    //
+    ///////////////////// LANGUAGES /////////////////////
+    //
+    //
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[typst]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "myriad-dreamin.tinymist"
+    },
+    "[markdown]": {
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "python.createEnvironment.trigger": "off",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.defaultColorDecorators": "auto",
+    "files.autoSave": "afterDelay",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportGeneralTypeIssues": "information",
+        "reportWildcardImportFromLibrary": "none"
+    },
+    "autopep8.args": [
+        "--ignore=F4,E123,E501,E704,E731,W5,C901"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "flake8.path": [
+        "--ignore=F4,E123,E501,E704,E731,W5,C901"
+    ],
+    //
+    //////////////////////// OTHER /////////////////////
+    //
+    "editor.fontSize": 16,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "editor.formatOnSave": true,
+    "svelte.enable-ts-plugin": true,
+    "svelte-intellisense.trace.server": "messages",
+    "makefile.configureOnOpen": true,
+    "git.openRepositoryInParentFolders": "never",
+    "cSpell.language": "en,de-de",
+    "cSpell.userWords": [
+        "L'Hopital"
+    ],
+    "explorer.confirmPasteNative": false,
+    "[plaintext]": {
+        "editor.wordWrap": "on",
+        "editor.wordWrapColumn": 80,
+        "editor.wrappingIndent": "same"
+    },
+    "[txt]": {
+        "editor.wrappingIndent": "same",
+        "editor.wordWrap": "on",
+        "editor.wordWrapColumn": 80,
+    },
+    "workbench.colorTheme": "Default Dark+",
+    "editor.stickyScroll.enabled": false,
+    "editor.renderWhitespace": "none",
+    "window.customTitleBarVisibility": "windowed",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "workbench.statusBar.visible": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "breadcrumbs.enabled": false,
+    "terminal.integrated.gpuAcceleration": "off",
+    "window.systemColorTheme": "dark",
+    "window.autoDetectColorScheme": false,
+}

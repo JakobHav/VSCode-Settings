@@ -1,0 +1,149 @@
+// VS Code Keybindings — Clean, Categorized, and Checked
+[
+    // ─────────────── Window Navigation (Ctrl) ───────────────
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusPreviousGroup"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusNextGroup"
+    },
+    // ─────────────── Move Editors Between Groups ───────────────
+    {
+        "key": "ctrl+cmd+h",
+        "command": "workbench.action.moveEditorToLeftGroup"
+    },
+    {
+        "key": "ctrl+cmd+l",
+        "command": "workbench.action.moveEditorToRightGroup"
+    },
+    // ─────────────── Indent / Outdent ───────────────
+    {
+        "key": "ctrl+[Backquote]",
+        "command": "editor.action.outdentLines"
+    },
+    {
+        "key": "ctrl+shift+[Backquote]",
+        "command": "editor.action.indentLines"
+    },
+    // ─────────────── Commenting ───────────────
+    {
+        "key": "ctrl+c",
+        "command": "editor.action.commentLine"
+    },
+    // ─────────────── Editor Close / Restore ───────────────
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    // You can remove this if `ctrl+t` is sufficient
+    {
+        "key": "cmd+shift+t",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    // ─────────────── Terminal Focus & Controls (Cmd) ───────────────
+    {
+        "key": "cmd+down",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+up",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    // ─────────────── UI Visibility Toggles (Cmd) ───────────────
+    {
+        "key": "cmd+n",
+        "command": "workbench.action.togglePanel",
+    },
+    {
+        "key": "cmd+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+m",
+        "command": "workbench.action.toggleStatusbarVisibility"
+    },
+    {
+        "key": "cmd+ctrl+b",
+        "command": "workbench.action.toggleAuxiliaryBar"
+    },
+    // ─────────────── Editor Layout / Sizing ───────────────
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.evenEditorWidths"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth"
+            ]
+        }
+    },
+    {
+        "key": "cmd+escape",
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.decreaseViewWidth"
+            ]
+        }
+    },
+    // ─────────────── Tab Visibility Toggle ───────────────
+    // If this toggles visibility cleanly, no need for two "when"
+    {
+        "key": "cmd+,",
+        "command": "workbench.action.toggleEditorTabs"
+    },
+    // ─────────────── Terminal in Editor (Multicommand) ───────────────
+    {
+        "key": "cmd+.",
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                "workbench.action.terminal.new",
+                "workbench.action.terminal.moveToEditor"
+            ]
+        }
+    },
+    // ─────────────── Misc / Extensions ───────────────
+    {
+        "key": "cmd+1",
+        "command": "toggleVim"
+    },
+    {
+        "key": "cmd+q",
+        "command": "workbench.action.selectTheme"
+    },
+    {
+        "key": "cmd+ctrl+p",
+        "command": "typst-preview.preview"
+    }
+]
