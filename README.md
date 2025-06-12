@@ -4,5 +4,6 @@ I spent a lot of time perfecting my VSCode and wanted to save and share my progr
 
 Major Things:
 - Theme and UI Changes
-- VSCode Vim integration
+- VSCode Vim and Whichkey integration
 - many, many custon shortcuts
+- Snippets in Python, Cpp and Rust (loops, demo classes, etc...)
