@@ -1,0 +1,267 @@
+{
+	// RUST
+	"rust_match": {
+		"scope": "rust",
+		"body": [
+			"match x {",
+			"  y => println!(\"y\"),",
+			"  _ => println!(\"default\"),",
+			"}",
+		],
+	},
+	"rust_if": {
+		"scope": "rust",
+		"body": [
+			"if x {",
+			"",
+			"}",
+			"else {",
+			"",
+			"}"
+		],
+	},
+	"rust_for": {
+		"scope": "rust",
+		"body": [
+			"for i in 0..5 {",
+			"",
+			"}"
+		],
+	},
+	"rust_while": {
+		"scope": "rust",
+		"body": [
+			"while x < 3 {",
+			"",
+			"}"
+		],
+	},
+	"rust_class": {
+		"scope": "rust",
+		"body": [
+			"struct CL {",
+			"    x: i32,",
+			"}",
+			"impl CL {",
+			"    fn new(x: i32) -> Self {",
+			"        Self { x }",
+			"    }",
+			"}",
+		],
+	},
+	"rust_file": {
+		"scope": "rust",
+		"body": [
+			"/*",
+			"  copyright ${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR}, Universität Freiburg",
+			"",
+			"  author: Jakob Haverkamp <jh1444@email.uni-freiburg.de>",
+			"",
+			"  description:",
+			"",
+			"*/",
+			"",
+			"",
+			"fn main()",
+			"{",
+			"",
+			"}",
+		],
+	},
+	"rust_cpy": {
+		"scope": "rust",
+		"body": [
+			"/*",
+			"  copyright ${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR}, Universität Freiburg",
+			"",
+			"  author: Jakob Haverkamp <jh1444@email.uni-freiburg.de>",
+			"",
+			"  description:",
+			"",
+			"*/",
+			"",
+		],
+	},
+	// CPP
+	"cpp_match": {
+		"scope": "cpp",
+		"body": [
+			"switch (x)",
+			"{",
+			"  case 1:",
+			"    break;",
+			"  default:",
+			"    break;",
+			"}",
+		],
+	},
+	"cpp_if": {
+		"scope": "cpp",
+		"body": [
+			"if ()",
+			"{",
+			"}",
+			"else",
+			"{",
+			"}"
+		],
+	},
+	"cpp_for": {
+		"scope": "cpp",
+		"body": [
+			"for (size_t i = 0; i < count; i++)",
+			"  {",
+			"  }"
+		],
+	},
+	"cpp_while": {
+		"scope": "cpp",
+		"body": [
+			"while(x)",
+			"  {",
+			"  }"
+		],
+	},
+	"cpp_class": {
+		"scope": "cpp",
+		"body": [
+			"class CL",
+			"{",
+			"private:",
+			"public:",
+			"  CL()",
+			"  {",
+			"  }",
+			"}"
+		],
+	},
+	"cpp_file": {
+		"scope": "cpp",
+		"body": [
+			"/*",
+			"  copyright ${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR}, Universität Freiburg",
+			"",
+			"  author: Jakob Haverkamp <jh1444@email.uni-freiburg.de>",
+			"",
+			"  description:",
+			"",
+			"*/",
+			"",
+			"",
+			"int main()",
+			"{",
+			"  return 0;",
+			"}",
+		],
+	},
+	"cpp_cpy": {
+		"scope": "cpp",
+		"body": [
+			"/*",
+			"  copyright ${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR}, Universität Freiburg",
+			"",
+			"  author: Jakob Haverkamp <jh1444@email.uni-freiburg.de>",
+			"",
+			"  description:",
+			"",
+			"*/",
+			"",
+		],
+	},
+	"cpp_header": {
+		"scope": "rust,cpp,jsonc,plaintext,json,snippets,typst",
+		"body": [
+			"",
+			"// -------------------------------------------------------------------",
+			"// ${1:Section}",
+			"// -------------------------------------------------------------------",
+		],
+	},
+	// PYTHON
+	"python_match": {
+		"scope": "python",
+		"body": [
+			"match x:",
+			"    case 1:",
+			"        pass",
+			"    case _:",
+			"        pass"
+		],
+	},
+	"python_if": {
+		"scope": "python",
+		"body": [
+			"if x:",
+			"    pass",
+			"else:",
+			"    pass"
+		],
+	},
+	"python_for": {
+		"scope": "python",
+		"body": [
+			"for x in y:",
+			"    pass"
+		],
+	},
+	"python_while": {
+		"scope": "python",
+		"body": [
+			"while x:",
+			"    pass"
+		],
+	},
+	"python_class": {
+		"scope": "python",
+		"body": [
+			"class CL:",
+			"    def __init__(self) -> None:",
+			"        pass"
+		],
+	},
+	"python_file": {
+		"scope": "python",
+		"body": [
+			"\"\"\"",
+			"  copyright ${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR}, Universität Freiburg",
+			"",
+			"  author: Jakob Haverkamp <jh1444@email.uni-freiburg.de>",
+			"",
+			"  description:",
+			"",
+			"\"\"\"",
+			"",
+			"",
+			"def main():",
+			"    pass",
+			"",
+			"",
+			"if __name__ == \"__main__\":",
+			"    main()",
+			"",
+		],
+	},
+	"python_cpy": {
+		"scope": "python",
+		"body": [
+			"\"\"\"",
+			"  copyright ${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR}, Universität Freiburg",
+			"",
+			"  author: Jakob Haverkamp <jh1444@email.uni-freiburg.de>",
+			"",
+			"  description:",
+			"",
+			"\"\"\"",
+			"",
+		],
+	},
+	"python_header": {
+		"scope": "python",
+		"body": [
+			"",
+			"# -------------------------------------------------------------------",
+			"# ${1:Section}",
+			"# -------------------------------------------------------------------",
+		],
+	},
+}

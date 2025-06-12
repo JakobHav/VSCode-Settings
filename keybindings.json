@@ -1,4 +1,3 @@
-// VS Code Keybindings — Clean, Categorized, and Checked
 [
     // ─────────────── Window Navigation (Ctrl) ───────────────
     {
@@ -25,6 +24,14 @@
         "key": "ctrl+k",
         "command": "workbench.action.focusNextGroup"
     },
+    {
+        "key": "ctrl+shift+h",
+        "command": "workbench.action.previousPanelView"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.nextPanelView"
+    },
     // ─────────────── Move Editors Between Groups ───────────────
     {
         "key": "ctrl+cmd+h",
@@ -36,11 +43,11 @@
     },
     // ─────────────── Indent / Outdent ───────────────
     {
-        "key": "ctrl+[Backquote]",
+        "key": "ctrl+shift+[Backquote]",
         "command": "editor.action.outdentLines"
     },
     {
-        "key": "ctrl+shift+[Backquote]",
+        "key": "ctrl+[Backquote]",
         "command": "editor.action.indentLines"
     },
     // ─────────────── Commenting ───────────────
@@ -53,7 +60,6 @@
         "key": "ctrl+t",
         "command": "workbench.action.closeActiveEditor"
     },
-    // You can remove this if `ctrl+t` is sufficient
     {
         "key": "cmd+shift+t",
         "command": "workbench.action.closeActiveEditor"
@@ -88,6 +94,10 @@
         "command": "workbench.action.toggleStatusbarVisibility"
     },
     {
+        "key": "cmd+w",
+        "command": "breadcrumbs.toggle"
+    },
+    {
         "key": "cmd+ctrl+b",
         "command": "workbench.action.toggleAuxiliaryBar"
     },
@@ -117,10 +127,14 @@
         }
     },
     // ─────────────── Tab Visibility Toggle ───────────────
-    // If this toggles visibility cleanly, no need for two "when"
     {
         "key": "cmd+,",
         "command": "workbench.action.toggleEditorTabs"
+    },
+    {
+        "key": ",",
+        "command": "whichkey.show",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     // ─────────────── Terminal in Editor (Multicommand) ───────────────
     {
@@ -135,12 +149,12 @@
     },
     // ─────────────── Misc / Extensions ───────────────
     {
-        "key": "cmd+1",
-        "command": "toggleVim"
-    },
-    {
         "key": "cmd+q",
         "command": "workbench.action.selectTheme"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "workbench.action.openRecent",
     },
     {
         "key": "cmd+ctrl+p",

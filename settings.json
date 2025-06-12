@@ -1,35 +1,317 @@
 {
-    ///////////////////// VIM /////////////////////
-    //
-    //
+    // -------------------------------------------------------------------
+    // VIM CONFIG 
+    // -------------------------------------------------------------------
+    "whichkey.bindings": [
+        {
+            "key": "c",
+            "name": "Comment Line",
+            "type": "command",
+            "command": "editor.action.commentLine"
+        },
+        {
+            "key": "y",
+            "name": "Insert Copyright Section",
+            "type": "command",
+            "command": "multiCommand.insertCopyByLang"
+        },
+        {
+            "key": "h",
+            "name": "Insert Header",
+            "type": "command",
+            "command": "multiCommand.insertHeaderByLang"
+        },
+        {
+            "key": "t",
+            "name": "+ Typst",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "t",
+                    "name": "Insert Typst Table",
+                    "type": "command",
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "Typst Table"
+                    },
+                },
+                {
+                    "key": "s",
+                    "name": "Insert 50/50 Split",
+                    "type": "command",
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "Typst Split"
+                    },
+                },
+            ]
+        },
+        {
+            "key": "s",
+            "name": "+ Snippets",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": " ",
+                    "name": "Insert File Template",
+                    "type": "command",
+                    "command": "multiCommand.insertDocByLang"
+                },
+                {
+                    "key": "w",
+                    "name": "Insert While",
+                    "type": "command",
+                    "command": "multiCommand.insertWhileByLang"
+                },
+                {
+                    "key": "f",
+                    "name": "Insert For",
+                    "type": "command",
+                    "command": "multiCommand.insertForByLang"
+                },
+                {
+                    "key": "i",
+                    "name": "Insert If",
+                    "type": "command",
+                    "command": "multiCommand.insertIfByLang"
+                },
+                {
+                    "key": "m",
+                    "name": "Insert Match",
+                    "type": "command",
+                    "command": "multiCommand.insertMatchByLang"
+                },
+                {
+                    "key": "c",
+                    "name": "Insert Class",
+                    "type": "command",
+                    "command": "multiCommand.insertClassByLang"
+                }
+            ]
+        }
+    ],
     "vim.useSystemClipboard": true,
     "vim.leader": ",",
-    "vim.normalModeKeyBindingsNonRecursive": [
+    "multiCommand.commands": [
         {
-            "before": [
-                "leader",
-                "t",
-                "t"
-            ],
-            "commands": [
-                "extension.createTable"
+            "command": "multiCommand.insertHeaderByLang",
+            "sequence": [
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "python_header"
+                    },
+                    "when": "editorLangId == python"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "cpp_header"
+                    },
+                    "when": "editorLangId == cpp"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "rust_header"
+                    },
+                    "when": "editorLangId == rust"
+                },
             ]
         },
         {
-            "before": [
-                "leader",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine"
+            "command": "multiCommand.insertCopyByLang",
+            "sequence": [
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "python_cpy"
+                    },
+                    "when": "editorLangId == python"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "cpp_cpy"
+                    },
+                    "when": "editorLangId == json"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "cpp_cpy"
+                    },
+                    "when": "editorLangId == cpp"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "rust_cpy"
+                    },
+                    "when": "editorLangId == rust"
+                }
             ]
         },
+        {
+            "command": "multiCommand.insertDocByLang",
+            "sequence": [
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "python_file"
+                    },
+                    "when": "editorLangId == python"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "cpp_file"
+                    },
+                    "when": "editorLangId == cpp"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "rust_file"
+                    },
+                    "when": "editorLangId == rust"
+                }
+            ]
+        },
+        {
+            "command": "multiCommand.insertClassByLang",
+            "sequence": [
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "python_class"
+                    },
+                    "when": "editorLangId == python"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "cpp_class"
+                    },
+                    "when": "editorLangId == cpp"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "rust_class"
+                    },
+                    "when": "editorLangId == rust"
+                }
+            ]
+        },
+        {
+            "command": "multiCommand.insertIfByLang",
+            "sequence": [
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "python_if"
+                    },
+                    "when": "editorLangId == python"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "cpp_if"
+                    },
+                    "when": "editorLangId == cpp"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "rust_if"
+                    },
+                    "when": "editorLangId == rust"
+                }
+            ]
+        },
+        {
+            "command": "multiCommand.insertWhileByLang",
+            "sequence": [
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "python_while"
+                    },
+                    "when": "editorLangId == python"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "cpp_while"
+                    },
+                    "when": "editorLangId == cpp"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "rust_while"
+                    },
+                    "when": "editorLangId == rust"
+                }
+            ]
+        },
+        {
+            "command": "multiCommand.insertForByLang",
+            "sequence": [
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "python_for"
+                    },
+                    "when": "editorLangId == python"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "cpp_for"
+                    },
+                    "when": "editorLangId == cpp"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "rust_for"
+                    },
+                    "when": "editorLangId == rust"
+                }
+            ]
+        },
+        {
+            "command": "multiCommand.insertMatchByLang",
+            "sequence": [
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "python_match"
+                    },
+                    "when": "editorLangId == python"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "cpp_match"
+                    },
+                    "when": "editorLangId == cpp"
+                },
+                {
+                    "command": "editor.action.insertSnippet",
+                    "args": {
+                        "name": "rust_match"
+                    },
+                    "when": "editorLangId == rust"
+                }
+            ]
+        }
     ],
-    //
-    //
-    ////////////// APPEARANCE //////////////////
-    //
-    //
+    // -------------------------------------------------------------------
+    // APPEARANCE
+    // -------------------------------------------------------------------
     "workbench.colorCustomizations": {
         "[Default Dark+]": {
             "titleBar.activeBackground": "#000000",
@@ -89,7 +371,6 @@
             "terminal.ansiBrightCyan": "#5fd7d7",
             "terminal.ansiBrightWhite": "#eeeeee"
         },
-        "terminal.background": "#00000000"
     },
     "workbench.activityBar.location": "top",
     "workbench.editor.enablePreview": false,
@@ -104,11 +385,9 @@
     "chat.commandCenter.enabled": false,
     "todo-tree.highlights.useColourScheme": true,
     "pdf-preview.default.sidebar": false,
-    //
-    //
-    ///////////////////// LANGUAGES /////////////////////
-    //
-    //
+    // -------------------------------------------------------------------
+    // LANGUAGE CONFIG 
+    // -------------------------------------------------------------------
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -129,6 +408,10 @@
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
+    "rust-analyzer.hover.actions.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.lens.enable": false,
+    "rust-analyzer.diagnostics.enable": false,
     "editor.defaultFormatter": "ms-python.python",
     "editor.defaultColorDecorators": "auto",
     "files.autoSave": "afterDelay",
@@ -146,9 +429,9 @@
     "flake8.path": [
         "--ignore=F4,E123,E501,E704,E731,W5,C901"
     ],
-    //
-    //////////////////////// OTHER /////////////////////
-    //
+    // -------------------------------------------------------------------
+    // OTHER 
+    // -------------------------------------------------------------------
     "editor.fontSize": 16,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
@@ -157,10 +440,10 @@
     "svelte-intellisense.trace.server": "messages",
     "makefile.configureOnOpen": true,
     "git.openRepositoryInParentFolders": "never",
-    "cSpell.language": "en,de-de",
-    "cSpell.userWords": [
-        "L'Hopital"
-    ],
+    // "cSpell.language": "en,de-de",
+    // "cSpell.userWords": [
+    // "L'Hopital"
+    // ],
     "explorer.confirmPasteNative": false,
     "[plaintext]": {
         "editor.wordWrap": "on",
@@ -172,16 +455,20 @@
         "editor.wordWrap": "on",
         "editor.wordWrapColumn": 80,
     },
-    "workbench.colorTheme": "Default Dark+",
+    "[typst-code]": {
+        "editor.wordWrap": "on",
+        "editor.wordWrapColumn": 100,
+        "editor.wrappingIndent": "same"
+    },
+    "workbench.colorTheme": "Default High Contrast",
     "editor.stickyScroll.enabled": false,
     "editor.renderWhitespace": "none",
     "window.customTitleBarVisibility": "windowed",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
-    "workbench.statusBar.visible": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
+    "[snippets]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "breadcrumbs.enabled": false,
-    "terminal.integrated.gpuAcceleration": "off",
-    "window.systemColorTheme": "dark",
-    "window.autoDetectColorScheme": false,
 }
