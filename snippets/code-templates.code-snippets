@@ -69,6 +69,21 @@
 		],
 	},
 	"rust_cpy": {
+		"scope": "typst",
+		"body": [
+			"/*",
+			"  copyright ${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR}, Universität Freiburg",
+			"",
+			"  author: Jakob Haverkamp <jh1444@email.uni-freiburg.de>",
+			"",
+			"  description:",
+			"",
+			"*/",
+			"",
+		],
+	},
+	// TYPST
+	"typst_cpy": {
 		"scope": "rust",
 		"body": [
 			"/*",

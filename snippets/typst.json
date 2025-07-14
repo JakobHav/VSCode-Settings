@@ -88,11 +88,12 @@
 			"",
 			"#show: doc => conf(",
 			"  doc,",
-			"  subject: \"Technische Info\",",
+			"  subject: \"Technische Informatik\",",
 			"  date: \"${CURRENT_DATE}.${CURRENT_MONTH}.${CURRENT_YEAR}\",",
 			"  prof: \"Prof. Dr. Christoph Scholl\",",
 			"  semester: \"SS 2025\",",
 			"  title: \"Übungsblatt 00\",",
+			"  header: true",
 			")",
 			"",
 			"= Aufgabe 1",
@@ -163,12 +164,31 @@
 			")",
 		]
 	},
-	"Typst Split": {
+	"Typst 2 Split": {
 		"body": [
-			"#let width = 50%",
+			"#let left = 50%",
 			"#table(",
-			"  columns: (width, 100%-width),",
+			"  columns: (left, 100% - left),",
 			"  stroke: 0pt,",
+			"  [",
+			"",
+			"  ],",
+			"  [",
+			"",
+			"  ]",
+			")",
+		]
+	},
+	"Typst 3 Split": {
+		"body": [
+			"#let left = 33.3%",
+			"#let right = 33.3%",
+			"#table(",
+			"  columns: (left, 100% - left - right, right),",
+			"  stroke: 0pt,",
+			"  [",
+			"",
+			"  ],",
 			"  [",
 			"",
 			"  ],",

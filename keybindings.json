@@ -50,11 +50,6 @@
         "key": "ctrl+[Backquote]",
         "command": "editor.action.indentLines"
     },
-    // ─────────────── Commenting ───────────────
-    {
-        "key": "ctrl+c",
-        "command": "editor.action.commentLine"
-    },
     // ─────────────── Editor Close / Restore ───────────────
     {
         "key": "ctrl+t",
@@ -78,6 +73,11 @@
     {
         "key": "cmd+k",
         "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.clear",
         "when": "terminalFocus"
     },
     // ─────────────── UI Visibility Toggles (Cmd) ───────────────
@@ -129,12 +129,13 @@
     // ─────────────── Tab Visibility Toggle ───────────────
     {
         "key": "cmd+,",
-        "command": "workbench.action.toggleEditorTabs"
+        "command": "whichkey.show",
+        "when": "editorTextFocus && vim.mode == 'Insert'"
     },
     {
         "key": ",",
         "command": "whichkey.show",
-        "when": "editorTextFocus && vim.mode == 'Normal'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     // ─────────────── Terminal in Editor (Multicommand) ───────────────
     {
@@ -143,7 +144,8 @@
         "args": {
             "sequence": [
                 "workbench.action.terminal.new",
-                "workbench.action.terminal.moveToEditor"
+                "workbench.action.terminal.moveToEditor",
+                "workbench.action.moveEditorToRightGroup"
             ]
         }
     },
@@ -155,6 +157,11 @@
     {
         "key": "ctrl+r",
         "command": "workbench.action.openRecent",
+    },
+    {
+        "key": "cmd+shift+r",
+        "command": "workbench.action.openRecent",
+        "when": "terminalFocus",
     },
     {
         "key": "cmd+ctrl+p",
